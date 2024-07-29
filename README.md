@@ -1,25 +1,32 @@
+# GENNUS - Generative Approach for Nucleotide Sequences
+
+GENNUS is a set of generative approaches designed to create synthetic nucleotide sequences.
+
+This set contains MIRGAN and SMOTE_DNA.
+
+## Downloading
+
+You can get GENNUS in three different ways:
+
+1. By downloading and unpacking.
+This can be done via any web browser or via the command line.
+
+Follow the steps below to download via command line:
+
+```
+wget https://github.com/chiquitto/GENNUS/archive/refs/heads/main.zip
+unzip GENNUS-master.zip
+```
+
+2. Cloning the GIT repository:
+
+```
+git clone https://github.com/chiquitto/GENNUS.git
+```
+
 # MIRGAN - Generating synthetic ncRNA data
 
 MIRGAN is a Generative Adversarial Networks-based approach designed to create synthetic Non-coding RNAs (ncRNAs) data.
-
-This repository also provides an alternative SMOTE-based approach to generating synthetic data.
-
-# Instalation
-
-Download the master folder and follow the steps below:
-
-```
-unzip MIRGAN-master.zip
-```
-
-Or git clone the MIRGAN respository:
-
-```
-git clone https://github.com/chiquitto/MIRGAN.git
-```
-
-
-# GAN
 
 ## The CONDA env
 
@@ -106,7 +113,9 @@ python mirgan/analyzers/CnnAnalyzer/create_model.py
 
 # SMOTE_DNA
 
-Synthetic Minority Over-sampling TEchnique (SMOTE) for DNA, is a approach used to generate synthetic data based in nucleotide sequences.
+SMOTE_DNA is a Synthetic Minority Over-sampling TEchnique (SMOTE)-based adapted to generate synthetic nucleotide sequence data.
+
+SMOTE-based approach to generating synthetic data
 
 
 ## The CONDA env
