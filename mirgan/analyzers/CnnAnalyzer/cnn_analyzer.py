@@ -11,7 +11,7 @@ from .cnnanalyzer_utils import contains_certain_characters, generate_onehot_enco
 from analyzers.CnnAnalyzer.structure.BinaryClassificator import BinaryClassificator
 
 class CnnAnalyzer(AnalyzerInterface):
-    def __init__(self, initial_data, model_path,
+    def __init__(self, model_path,
         device, maxlen=121, padnt="N"):
 
         self.maxlen = maxlen
@@ -20,7 +20,6 @@ class CnnAnalyzer(AnalyzerInterface):
         self.device = device
 
         self.init_classificator(model_path)
-        self.run_first(initial_data)
 
     def setInput(self, sequence_list):
         self.sequence_list = sequence_list

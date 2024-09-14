@@ -83,34 +83,8 @@ def process_argv(argv):
 
     return r
 
-def is_notebook() -> bool:
-    # https://stackoverflow.com/questions/15411967/how-can-i-check-if-code-is-executed-in-the-ipython-notebook
-    try:
-        shell = get_ipython().__class__.__name__
-        if shell == 'ZMQInteractiveShell':
-            return True   # Jupyter notebook or qtconsole
-        elif shell == 'TerminalInteractiveShell':
-            return False  # Terminal running IPython
-        else:
-            return False  # Other type (?)
-    except NameError:
-        return False      # Probably standard Python interpreter
-
 # %%
-if is_notebook():
-    mode = "0"
-    input = '../input/example_gan_input.txt'
-    outputdir = '../tmp/test1'
-
-    argv = ['filename.py',
-            "--mode", mode,
-            "--input", input,
-            "--outputdir", outputdir
-            ]
-    opts = process_argv(argv)
-
-if not is_notebook():
-    opts = process_argv(sys.argv)
+opts = process_argv(sys.argv)
 
 print("opts=", opts)
 
@@ -282,12 +256,7 @@ analyzer = None
 analyzer_threshold = 0
 
 if mode == 1:
-    from analyzers.CnnAnalyzer.cnn_analyzer import CnnAnalyzer
-
-    analyzer = CnnAnalyzer(loaded_ds,
-        model_path="mirgan/analyzers/CnnAnalyzer/cnnanalyzer_models/mirtron_mirna/best.pt",
-        device=device)
-    analyzer_threshold = 0.95
+    from analyzer_loader import analyzer, analyzer_threshold
 
 # %%
 def save_sequences(sequences, save_dir, prefix):
