@@ -1,6 +1,6 @@
 # MIRGAN - Generating synthetic ncRNA data with GAN
 
-MIRGAN is a Generative Adversarial Networks-based approach designed to create synthetic Non-coding RNAs (ncRNAs) nucleotide sequences.
+**MIRGAN** is a Generative Adversarial Networks-based approach designed to create synthetic Non-coding RNAs (ncRNAs) nucleotide sequences.
 
 # Table of Contents
 - [Setting Up the Environment](#setting-up-the-environment)

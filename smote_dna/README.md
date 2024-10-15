@@ -1,6 +1,6 @@
 # SMOTE_DNA
 
-SMOTE_DNA is a Synthetic Minority Over-sampling TEchnique (SMOTE)-based adapted to generate synthetic nucleotide sequence data.
+**SMOTE_DNA** is a Synthetic Minority Over-sampling TEchnique (SMOTE)-based adapted to generate synthetic nucleotide sequence data.
 
 By following these instructions, you should be able to generate synthetic nucleotide sequences using SMOTE_DNA.
 For more details on the different modes and algorithm-specific configurations, please refer to the original research publication.
